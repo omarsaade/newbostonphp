@@ -1,0 +1,28 @@
+<producers>
+<producer>
+    <name>alex</name>
+    <age>21</age>
+    <show>
+        <showname>A show</showname>
+        <showdate>12th december 2021</showdate>
+    </show>
+    <show>
+        <showname>another show</showname>
+        <showdate>4th july 2009</showdate>
+    </show>
+</producer>
+<producer>
+    <name>billy</name>
+    <age>11</age>
+    <show>
+        <showname>Better show</showname>
+        <showdate>25th july 2007</showdate>
+    </show>
+</producer>
+
+
+
+
+
+
+</producers>
