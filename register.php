@@ -12,7 +12,11 @@ if (!loggedin()) {
         $firstname = $_POST['firstname'];
         $surname = $_POST['surname'];
              if (!empty($username)&&!empty($password)&&!empty($password_again)&&!empty($firstname)&&!empty($surname)) {
-                 if ($password!=$password_again) {
+                if (strlen($username)>30||strlen($firstname)>40||strlen($surname)>40) {
+                    echo 'please ahear to maxlength if filed';
+                 } else {
+            
+                if ($password!=$password_again) {
                     echo 'passwords do not match';
                     }  else {
                        $query = "SELECT `username` FROM `users` WHERE `username`='".mysqli_real_escape_string($conn,$username)."'";
@@ -28,7 +32,8 @@ if (!loggedin()) {
                                 echo 'sorry, we couldnt register you at this time.try again later.';
                             }    
                             }
-                                }
+                        }
+                    }       
 
                                 } else {
                                echo "all fileds are required";
@@ -39,11 +44,11 @@ if (!loggedin()) {
                           ?>
                       
 <form action="register.php"  method="post">
-    Username:<br> <input type="text" name="username" value="<?php echo $username; ?>"><br><br>
+    Username:<br> <input type="text" name="username" maxlength="30" value="<?php if (isset($username)) { echo $username;} ?>"><br><br>
     Password:<br> <input type="password" name="password" id=""><br><br>
     Password again:<br> <input type="password" name="password_again" id=""><br><br>
-    Firstname:<br> <input type="text" name="firstname" value="<?php echo $firstname; ?>"><br><br>
-    surname:<br> <input type="text" name="surname" value="<?php echo $surname; ?>"><br><br>
+    Firstname:<br> <input type="text" name="firstname" maxlength="40" value="<?php if (isset($firstname)) {echo $firstname;} ?>"><br><br>
+    surname:<br> <input type="text" name="surname"  maxlength="40" value="<?php if (isset($surname)) {echo $surname;} $surname; ?>"><br><br>
     <input type="submit" value="Register">
 </form>  
 <?php 

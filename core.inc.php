@@ -2,8 +2,9 @@
 ob_start();// , ma5zan mo2akat
 session_start();// session deyman 
 $current_file = $_SERVER['SCRIPT_NAME'];// esem el hala2 file 
-$http_referer = $_SERVER['HTTP_REFERER'];// esem el  file li jina mena
-
+if(isset($_SERVER['HTTP_REFERER'])&&!empty($_SERVER['HTTP_REFERER'])) {
+$http_referer = $_SERVER['HTTP_REFERER'];
+}
 function loggedin() {
     if (isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])) {
        return true ;
