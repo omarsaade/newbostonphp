@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #eee;
+    font-family: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
+    font-size: larger;
+  }
+  
+  .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: clamp(100%, 2vw, 110%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Cantarell, Ubuntu, Helvetica, Arial, sans-serif;
+  }
+  
+  .navbar li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  
+  .vlog {
+      margin-top: 20px;
+      width: 100%;
+      height: 100%;
+    
+     
+      
+  }
+
+.imago {
+    width:400px;
+    height:max-content;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-right: 100px;
+} 
+
+.imago:hover{
+width: 420px;
+transition: 2s;
+}
+
+.A {
+    margin-left: 30px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.a {
+    width: 500px;
+    height: auto;
+    background-color:antiquewhite;
+    padding: 20px;
+    margin: 20px;
+}
+
+.b{
+    width: 350px ;
+    height: 200px;
+}

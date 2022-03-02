@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <ul class="navbar">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li style="float:right" class="time">Login</li>
+    </ul>
+
+
+
+    <div class="blogo"></div>
+
+
+    <div>
+      <fieldset id="subscription-box">
+        <legend>✉️ Subscribe via email</legend>
+        <div id="subscription-success">Thanks for Subscribing!</div>
+        <div id="subscription-failure">Subscription failed. Please try again later.</div>
+        <form id="subscription-form" method="POST" action="blog.php">
+          <input id="subscription-email" name="newsl" type="email" placeholder="Enter your email" required>
+          <input id="subscription-submit" type="button" value="Subscribe" onclick="subscribe();">
+        </form>
+      </fieldset>
+    </div>
+    <script src="blog.js"></script>
+
+</body>
+
+</html>
